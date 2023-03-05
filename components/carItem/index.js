@@ -1,11 +1,14 @@
-import React from 'react'
-import { Text, View,ImageBackground } from 'react-native';
-import styles from './styles' 
+import React from 'react';
+import {View, Text, ImageBackground} from 'react-native';
+import StyledButton from "../styledBtn";
+import styles from './styles';
 
-function CarItem(props) {
+const CarItem = (props) => {
+
+
   return (
-    <View style={styles.carcContainer}>
-    <ImageBackground source={require('../../assets/images/ModelX.jpeg')}
+    <View style={styles.carContainer}>
+       <ImageBackground source={require('../../assets/images/ModelX.jpeg')}
     style={styles.image}
     />
 
@@ -17,8 +20,27 @@ function CarItem(props) {
         Starting at $69,420
       </Text>
     </View>
-  </View>
-    )
-}
 
-export default CarItem
+      <View style={styles.buttonsContainer}>
+        <StyledButton
+          type="primary"
+          content={"Custom Order"}
+          onPress={() => {
+            console.warn("Custom Order was pressed");
+          }}
+        />
+
+        <StyledButton
+          type="secondary"
+          content={"Existing Inventory"}
+          onPress={() => {
+            console.warn("Existing Inventory was pressed");
+          }}
+        />
+      </View>
+
+    </View>
+  );
+};
+
+export default CarItem;

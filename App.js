@@ -1,16 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,ImageBackground } from 'react-native';
-import CarItem from './components/carItem';
-import StyledBtn from './components/styledBtn';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import CarItem from './components/carItem'
+import StyledBtn from './components/styledBtn'
 
 export default function App() {
   return (
     <View style={styles.container}>
-     <CarItem/>
-     <StyledBtn type='secondary' content={'Custom Order'} onPress={()=>{
-      console.warn('Custom order button pressed')
-     }}/>
-
+      <CarItem/>
+      <StyledBtn/>
       <StatusBar style="auto" />
     </View>
   );
