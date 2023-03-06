@@ -3,11 +3,13 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import CarsList from './components/CarsList';
 import StyledBtn from './components/styledBtn'
+import Header from './components/Header';
 
 export default function App() {
   return (
     <View style={styles.container}>
-       <CarsList />
+      <Header />
+      <CarsList />
       <StyledBtn/>
       <StatusBar style="auto" />
     </View>
